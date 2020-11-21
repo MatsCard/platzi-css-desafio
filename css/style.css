@@ -1,0 +1,321 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?ydd2al');
+  src:  url('../fonts/icomoon.eot?ydd2al#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?ydd2al') format('truetype'),
+    url('../fonts/icomoon.woff?ydd2al') format('woff'),
+    url('../fonts/icomoon.svg?ydd2al#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-fire:before {
+  content: "\e901";
+}
+.icon-flame:before {
+  content: "\e901";
+}
+.icon-hot:before {
+  content: "\e901";
+}
+.icon-popular:before {
+  content: "\e901";
+}
+.icon-cog:before {
+  content: "\e902";
+}
+.icon-gear:before {
+  content: "\e902";
+}
+.icon-preferences:before {
+  content: "\e902";
+}
+.icon-settings:before {
+  content: "\e902";
+}
+.icon-generate:before {
+  content: "\e902";
+}
+.icon-control:before {
+  content: "\e902";
+}
+.icon-options:before {
+  content: "\e902";
+}
+.icon-home:before {
+  content: "\e903";
+}
+.icon-house:before {
+  content: "\e903";
+}
+.icon-heart:before {
+  content: "\e900";
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  /* width: 1024px; */
+
+  display: grid;
+  grid-template-columns: 60px minmax(280px, 1024px);
+  grid-template-rows: minmax(min-content, max-content) minmax(90vh, auto);
+  /* grid-template-rows: 70px minmax(90vh, auto); */
+  /* grid-template-rows: minmax(70px, 10%) 85vh; */
+  grid-template-areas: "hero hero" "nav movies";
+
+  justify-content: center;
+}
+
+
+
+.hero {
+  /* background-color: red; */
+
+  grid-area: hero;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  /* align-content: center; */
+  /* box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1), 0 8px 0 0 rgba(0, 0, 0, 0.09); */
+
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.05), 0 4px 0 0 rgba(0, 0, 0, 0.05), 0 6px 0 0 rgba(0, 0, 0, 0.05);
+  z-index: 3;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+
+}
+
+.user-image {
+  margin: 1em;
+}
+
+.user-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 2em;
+}
+
+.search-pokemon {
+  /* justify-self: end;
+  align-self: end; */
+  /* margin-left: 12em;
+  object-fit: contain; */
+  /* width: 100%; */
+}
+
+.search-pokemon input {
+  padding: 0 6vw;
+  /* width: 100%; */
+  border-radius: 8px;
+}
+
+.nav {
+  grid-area: nav;
+  position: relative;
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-image: linear-gradient(to bottom right, #3222bf, #36b8c7);
+  /* align-items: center; */
+  transition: .3s;
+}
+
+.icon:hover {
+  color: #a1a1a1;
+  transition: .3s;
+}
+
+.nav span{
+  font-size: 2em;
+  text-align: center;
+}
+
+.nav p{
+  font-size: 0.4em;
+}
+
+.movies {
+
+  grid-area: movies;
+  /* background-color: green; */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 280px);
+  grid-gap: 40px;
+  justify-content: center;
+  margin-top: 30px;
+
+}
+
+.post-image{
+    margin: 0;
+}
+
+
+.post-image img{
+  max-width: 280px;
+  height: 300px;
+  vertical-align: top;
+  z-index: 0;
+}
+
+.movie {
+  display: block;
+
+  /* overflow: hidden; */
+  /* flex-shrink: 0; */
+
+  /* width: 100px; */
+  position: relative;
+
+}
+
+
+.movie-overlay{
+  background: rgba(0, 0, 0, .4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  transition: 0.3s;
+}
+
+
+.movie:hover .movie-overlay {
+  display: flex;
+}
+
+.movie-info {
+  font-size: 10px;
+  background-color: rgba(43, 56, 240, 0.8);
+  color: white;
+  position: absolute;
+  /* width: inherit; */
+  /* text-align: center; */
+  bottom: 0;
+  /* z-index: 2; */
+
+}
+
+.trending-topic h1 {
+  margin-left: 3em;
+}
+
+.title {
+  font-size: 1.5em;
+  text-align: center;
+}
+
+.movie-info p{
+  text-align: justify;
+  padding: 0.5em;
+
+}
+
+.site h1 {
+  font-family: 'Kumar One Outline', cursive;
+  color: #3222bf;
+}
+
+.site-img {
+  margin: 0;
+  text-align: center;
+}
+
+.site-img img {
+  width: 20px;
+}
+
+.site {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+}
+
+
+@media screen and (max-width: 1023px) {
+
+}
+
+@media screen and (max-width: 765px) {
+  .hero {
+    /* flex-direction: column; */
+    justify-content: space-around;
+  }
+
+  .search-pokemon {
+    order: 1;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.5em;
+  }
+
+  .search-pokemon input {
+
+    width: 80vw;
+  }
+
+}
+
+
+@media screen and (max-width: 480px) {
+  .container {
+
+    grid-template-columns: auto;
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+    /* grid-template-rows: 70px minmax(90vh, auto); */
+    /* grid-template-rows: minmax(70px, 10%) 85vh; */
+    grid-template-areas: "hero"  "nav" "movies";
+
+    /* display: flex; */
+  }
+  .nav {
+    flex-direction: row;
+    justify-content: space-around;
+
+  }
+
+}
+
+@media screen and (max-width: 350px) {
+  .hero {
+    font-size: 0.7em;
+  }
+
+@media screen and (max-width: 320px) {
+  .hero {
+    font-size: 0.7em;
+  }
+
+}
